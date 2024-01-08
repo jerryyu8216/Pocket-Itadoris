@@ -1,7 +1,7 @@
 package PocketItadoris;
 
 public class Character {
-
+    private int characterId; // id of Character
     private String name; // Character Name
     private int level;
     private Attack [] learnableAttacks; // All attacks a character can learn
@@ -13,7 +13,8 @@ public class Character {
     private int hp; // Character's Hp stat
     private Ability ability; // Charter's Equipped special ability
 
-    public Character(String name, int level, Attack[] learnableAttacks, Attack[] equippedAttacks, Attack specialAttack, int attack, int defense, int speed, int hp, Ability ability){
+    public Character(int characterId, String name, int level, Attack[] learnableAttacks, Attack[] equippedAttacks, Attack specialAttack, int attack, int defense, int speed, int hp, Ability ability){
+        this.characterId = characterId;
         this.name = name;
         this.level = level;
         this.learnableAttacks = learnableAttacks;
@@ -24,6 +25,9 @@ public class Character {
         this.speed = speed;
         this.hp = hp;
         this.ability = ability;
+    }
+    public int getCharacterId() {
+        return characterId;
     }
     public String getName() {
         return name;
