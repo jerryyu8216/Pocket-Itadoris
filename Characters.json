@@ -1,0 +1,84 @@
+{
+    "Jujutsu-Kaisen-Characters":[
+        {
+            "characterId": 1,
+            "name": "Itadori Yuji",
+            "level": 1,
+            "learnableAttacksIds":[1,2,3,4],
+            "equippedAttacksIds":[1,2,3],
+            "specialAttack":4,
+            "attack":70,
+            "defense":70,
+            "speed":70,
+            "hp":70,
+            "energyLimit": 50,
+            "energyRegainRate": 10,
+            "ability":1
+        },
+        {
+            "characterId": 2,
+            "name": "Gojo Satoru",
+            "level": 1,
+            "learnableAttacks":[1,2,4],
+            "equippedAttacks":[1,2],
+            "specialAttack":4,
+            "attack": 90,
+            "defense": 40,
+            "speed": 90,
+            "hp": 40,
+            "energyLimit": 80,
+            "energyRegainRate": 40,
+            "ability":2
+        }
+    ],
+    "Jujutsu-Kaisen-Attacks":[
+        {
+            "attackId":1,
+            "name": "Cursed Energy Punch",
+            "description": "The user launches a punch enveloped in their cursed energy",
+            "damage": 20,
+            "healing": 0,
+            "cost": 10,
+            "type": "basic"
+        },
+        {
+            "attackId":2,
+            "name": "Cursed Energy Blast",
+            "description": "The user launches a blast of raw cursed energy.",
+            "damage": 20,
+            "healing": 0,
+            "cost": 10,
+            "type": "basic"
+        },
+        {
+            "attackId":3,
+            "name": "Divergent Fist",
+            "description": "The user strikes using a thin layer of cursed energy, and a second wave of cursed energy is unleashed a few moments afterward, effectively creating two impacts with one punch. Hits twice with second hit being 1.5 x damage.",
+            "damage": 20,
+            "healing": 0,
+            "cost": 20,
+            "type": "basic"
+        },
+        {
+            "attackId":4,
+            "name": "Black Flash",
+            "description": "Black Flash is a distortion in space that occurs within 0.000001 seconds of a physical hit. When this attack is successful the user's attributes increase by 20% for 5 turns",
+            "damage": 75,
+            "healing": 0,
+            "cost": 30,
+            "type": "special"
+        }
+    ],
+    "Jujutsu-Kaisen-Abilities":[
+        {
+            "abilityId":1,
+            "name": "Master Hand-to-Hand Combatant",
+            "description": "Punching based attacks deal 50% more damage"
+        },
+        {
+            "abilityId":2,
+            "name": "Infinity",
+            "description": "Nullifies attacks under 25 damage"
+        }
+    ]
+}

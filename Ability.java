@@ -1,22 +1,22 @@
 package PocketItadoris;
 
 public class Ability {
+    private int abilityId;
     private String name;
     private String description;
-    private String[] effects;
 
-    public Ability(String name, String description, String[] effects) {
+    public Ability(int abilityId, String name, String description) {
+        this.abilityId = abilityId;
         this.name = name;
         this.description = description;
-        this.effects = effects;
+    }
+    public int getAbilityId(){
+        return abilityId;
     }
     public String getName(){
         return name;
     }
     public String getDescription() {
         return description;
-    }
-    public String[] getEffects(){
-        return effects;
     }
 }
