@@ -104,5 +104,8 @@ public class Character {
     public Ability getAbility(){
         return ability;
     }
-
+    @Override
+    public String toString() {
+        return "HP: " + this.hp + " Energy: " + this.energy;
+    }
 }
