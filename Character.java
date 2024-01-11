@@ -1,19 +1,23 @@
 package PocketItadoris;
 
 public class Character {
-
+    private int characterId; // id of Character
     private String name; // Character Name
     private int level;
     private Attack [] learnableAttacks; // All attacks a character can learn
     private Attack[] equippedAttacks; // Array of attacks currently equipped
     private Attack specialAttack; // Special attack currently equipped
-    private int attack; // Character's Attack stat
-    private int defense; // Character's Defense stat
-    private int speed; // Character's Speed stat
-    private int hp; // Character's Hp stat
+    private int attack; // Character's Attack stat 0 - 100
+    private int defense; // Character's Defense stat 0 - 100
+    private int speed; // Character's Speed stat 0 - 100
+    private int hp; // Character's Hp stat 0 - 100
+    private int energy; // Character's energy stat 0 - energyLimit
+    private int energyLimit; // Character's max amount of energy allowed 0 - 100
+    private int energyRegainRate; // Character's energy regain rate per turn
     private Ability ability; // Charter's Equipped special ability
 
-    public Character(String name, int level, Attack[] learnableAttacks, Attack[] equippedAttacks, Attack specialAttack, int attack, int defense, int speed, int hp, Ability ability){
+    public Character(int characterId, String name, int level, Attack[] learnableAttacks, Attack[] equippedAttacks, Attack specialAttack, int attack, int defense, int speed, int hp, int energyLimit, int energyRegainRate, Ability ability){
+        this.characterId = characterId;
         this.name = name;
         this.level = level;
         this.learnableAttacks = learnableAttacks;
@@ -23,7 +27,13 @@ public class Character {
         this.defense = defense;
         this.speed = speed;
         this.hp = hp;
+        this.energy = 0;
+        this.energyLimit = energyLimit;
+        this.energyRegainRate = energyRegainRate;
         this.ability = ability;
+    }
+    public int getCharacterId() {
+        return characterId;
     }
     public String getName() {
         return name;
@@ -73,8 +83,29 @@ public class Character {
     public void setHp(int hp){
         this.hp = hp;
     }
+    public int getEnergy() {
+        return energy;
+    }
+    public void setEnergy(int energy) {
+        this.energy = energy;
+    }
+    public int getEnergyLimit() {
+        return energyLimit;
+    }
+    public void setEnergyLimit(int energyLimit){
+        this.energyLimit = energyLimit;
+    }
+    public int getEnergyRegainRate() {
+        return energyRegainRate;
+    }
+    public void setEnergyRegainRate(int energyRegainRate){
+        this.energyRegainRate = energyRegainRate;
+    }
     public Ability getAbility(){
         return ability;
     }
-
+    @Override
+    public String toString() {
+        return "HP: " + this.hp + " Energy: " + this.energy;
+    }
 }
